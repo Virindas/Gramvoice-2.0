@@ -1,0 +1,112 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * GramVoice 2.0 design tokens.
+ * Colorful, warm, vibrant light theme for village governance.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 3px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-soft: var(--secondary-soft);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-review: var(--review);
+  --color-review-soft: var(--review-soft);
+  --color-progress: var(--progress);
+  --color-progress-soft: var(--progress-soft);
+  --color-completed: var(--completed);
+  --color-completed-soft: var(--completed-soft);
+  --color-rejected: var(--rejected);
+  --color-rejected-soft: var(--rejected-soft);
+  --color-admin: var(--admin);
+  --color-admin-foreground: var(--admin-foreground);
+  --color-admin-soft: var(--admin-soft);
+  --shadow-soft: 0 4px 20px -2px oklch(0.4 0.08 187 / 12%), 0 2px 6px -1px oklch(0.4 0.08 187 / 8%);
+  --shadow-lift: 0 10px 30px -4px oklch(0.4 0.08 187 / 18%), 0 4px 10px -2px oklch(0.4 0.08 187 / 12%);
+}
+
+:root {
+  --radius: 1rem;
+  /* Warm off-white page background */
+  --background: oklch(0.975 0.015 85);
+  --foreground: oklch(0.22 0.035 230);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.035 230);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.035 230);
+
+  /* Deep rich Teal primary */
+  --primary: oklch(0.48 0.12 185);
+  --primary-foreground: oklch(0.99 0.005 190);
+  --primary-soft: oklch(0.93 0.05 185);
+
+  /* Rich Golden Amber secondary */
+  --secondary: oklch(0.72 0.17 75);
+  --secondary-foreground: oklch(0.24 0.08 65);
+  --secondary-soft: oklch(0.95 0.065 78);
+
+  --muted: oklch(0.94 0.015 85);
+  --muted-foreground: oklch(0.46 0.03 220);
+  --accent: oklch(0.92 0.05 185);
+  --accent-foreground: oklch(0.32 0.09 185);
+
+  --destructive: oklch(0.56 0.22 25);
+  --destructive-foreground: oklch(0.99 0.005 90);
+  --success: oklch(0.54 0.16 150);
+  --success-foreground: oklch(0.99 0.005 150);
+
+  --border: oklch(0.89 0.02 85);
+  --input: oklch(0.88 0.025 85);
+  --ring: oklch(0.48 0.12 185);
+
+  /* Vibrant Complaint Statuses */
+  --review: oklch(0.58 0.17 260);
+  --review-soft: oklch(0.93 0.06 260);
+  --progress: oklch(0.68 0.18 65);
+  --progress-soft: oklch(0.94 0.07 70);
+  --completed: oklch(0.52 0.16 150);
+  --completed-soft: oklch(0.93 0.06 150);
+  --rejected: oklch(0.56 0.22 25);
+  --rejected-soft: oklch(0.94 0.05 25);
+
+  /* Admin portal theme */
+  --admin: oklch(0.42 0.13 270);
+  --admin-foreground: oklch(0.99 0.005 270);
+  --admin-soft: oklch(0.93 0.05 270);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Nunito Sans", "Noto Sans Devanagari", "Noto Sans Tamil", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
